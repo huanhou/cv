@@ -273,6 +273,7 @@ body {
   }
 }
 
+/* Hide all sections by default */
 .section {
   display: none;
   max-height: 75vh;
@@ -280,21 +281,24 @@ body {
   padding-right: 10px;
 }
 
+/* Show only the active section */
 .section.active {
   display: block;
 }
 
-#contact {
+/* Contact Section Styling */
+#contact.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
+  min-height: 600px; /* Adjusted minimum height for larger form display */
 }
 
 #contactForm {
   width: 100%;
-  max-width: 500px;
-  padding: 20px;
+  max-width: 600px;
+  padding: 30px;
   background-color: #2a2a2a;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -313,6 +317,10 @@ body {
   font-size: 1rem;
 }
 
+#contactForm textarea {
+  height: 150px;
+}
+
 #contactForm button {
   background-color: #4caf50;
   color: #fff;
@@ -322,4 +330,1114 @@ body {
 
 #contactForm button:hover {
   background-color: #3e8e41;
+}
+
+.resize {
+  width: 10%;
+  height: auto;
+}
+/* Container for horizontal scrolling */
+.project-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+  margin-top: auto;
+}
+
+.project-card {
+  min-width: 300px;
+  max-width: 300px;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-technologies {
+  font-size: 0.8rem;
+  color: #a8ff60;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 0.5rem 0;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  color: #c5c5c5;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #4caf50;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.project-link:hover {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Center the Projects Section Vertically */
+#projects.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Make sure it takes the full viewport height */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.project-container {
+  display: flex;
+  gap: 2rem; /* Increase space between cards */
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+  justify-content: center;
+}
+
+/* Container for horizontal scrolling */
+.project-container {
+  display: flex;
+  gap: 2rem; /* Increase space between cards */
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+.project-card {
+  min-width: 400px; /* Increase card width */
+  max-width: 400px; /* Increase card width */
+  background-color: #2a2a2a;
+  border-radius: 15px; /* Larger border radius for smoother corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow for a more elevated look */
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 250px; /* Larger image height */
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.project-content {
+  padding: 1.5rem; /* More padding for spacing */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-technologies {
+  font-size: 1rem; /* Larger font size for technologies */
+  color: #a8ff60;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.project h3 {
+  font-size: 1.5rem; /* Larger title */
+  color: #ffffff;
+  margin: 0.75rem 0;
+}
+
+.project-description {
+  font-size: 1.1rem; /* Larger description font */
+  color: #c5c5c5;
+  margin-bottom: 1.5rem;
+}
+
+.project-link {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #4caf50; /* Thicker border */
+  padding: 0.5rem 1rem; /* Larger button padding */
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.project-link:hover {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.about-content {
+  background-color: #2a2a2a;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #e0e0e0;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #c5c5c5;
+  text-align: center;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.about-item {
+  background-color: #333;
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: #a8ff60;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+}
+
+.about-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #4caf50;
+}
+
+.about-item p {
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+  background-color: #444;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: #a8ff60;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+}
+
+.skill-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #e0e0e0;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.skill-icon:hover::after {
+  opacity: 1;
+}
+
+.project-image {
+  width: 100%;
+  height: auto; /* Allow image height to adjust to show full image */
+  object-fit: contain; /* Ensures the entire image is visible */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #333; /* Add background color in case of different aspect ratios */
+}
+
+/* Heading Styling */
+.section h2 {
+  font-size: 2.5rem; /* Increase font size for prominence */
+  color: #a8ff60;
+  margin-bottom: 2rem; /* Add space below heading */
+  text-align: left; /* Align heading to the left */
+  padding-left: 2rem;
+  padding-right: 2rem; /* Add left padding for positioning */
+}
+
+/* Project Container for Horizontal Scrolling */
+.project-container {
+  display: flex;
+  gap: 2rem; /* Space between project cards */
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+  padding-left: rem;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.project-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari, and Edge */
+}
+
+/* Enlarged Project Cards */
+.project-card {
+  min-width: 450px; /* Increase width for bigger cards */
+  max-width: 450px;
+  height: 550px; /* Increase height for larger cards */
+  background-color: #2a2a2a;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Full Image Display */
+.project-image {
+  width: 100%;
+  height: 100%; /* Adjust to fill the card's height */
+  object-fit: contain; /* Ensure the entire image is visible */
+  background-color: #333; /* Background color for non-standard aspect ratios */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Content inside Project Card */
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+.project-technologies {
+  font-size: 1.1rem;
+  color: #a8ff60;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 0.75rem 0;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: #c5c5c5;
+  margin-bottom: 1.5rem;
+}
+
+.project-link {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #4caf50;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.project-link:hover {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Project Container for Grid Layout */
+.project-container {
+  display: flex;
+  gap: 2rem; /* Space between project cards */
+  overflow-x: auto;
+  padding: 1rem 2rem; /* General padding on top/bottom and sides */
+  scroll-snap-type: x mandatory;
+  padding-left: 400%; /* Extra padding on the left for the first project card */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.project-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari, and Edge */
+}
+
+/* Enlarged Project Cards */
+.project-card {
+  min-width: 450px; /* Increase width for bigger cards */
+  max-width: 450px;
+  height: 550px; /* Increase height for larger cards */
+  background-color: #2a2a2a;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Full Image Display */
+.project-image {
+  width: 100%;
+  height: 100%; /* Adjust to fill the card's height */
+  object-fit: contain; /* Ensure the entire image is visible */
+  background-color: #333; /* Background color for non-standard aspect ratios */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Content inside Project Card */
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+.project-technologies {
+  font-size: 1.1rem;
+  color: #a8ff60;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 0.75rem 0;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: #c5c5c5;
+  margin-bottom: 1.5rem;
+}
+
+.project-link {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #4caf50;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.project-link:hover {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.project-card {
+  min-width: 450px;
+  max-width: 450px;
+  height: 550px;
+  background-color: #2a2a2a;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Contact Section Styling */
+#contact.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem; /* Padding for top/bottom spacing */
+  background-color: #1a1a1a;
+  min-height: 80vh; /* Ensures section fills most of the viewport */
+}
+
+#contactForm {
+  width: 80%; /* Form takes up 80% of available width */
+  max-width: 700px; /* Limits the form width on larger screens */
+  padding: 2rem 2.5rem; /* Spacious padding for a polished look */
+  background-color: #2a2a2a;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  margin-left: 25%;
+}
+
+/* Styling for Form Fields */
+#contactForm input,
+#contactForm textarea,
+#contactForm button {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #4caf50;
+  border-radius: 8px;
+  background-color: #333;
+  color: #a8ff60;
+  font-size: 1rem;
+}
+
+/* Textarea Styling */
+#contactForm textarea {
+  height: 200px; /* Increased height for larger textarea */
+  resize: none; /* Prevents resizing */
+}
+
+/* Button Styling */
+#contactForm button {
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+}
+
+#contactForm button:hover {
+  background-color: #3e8e41;
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* Label Styling */
+#contactForm label {
+  color: #a8ff60;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: bold;
+}
+
+/* Resume Section Styling */
+.resume-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  color: #a8ff60;
+  margin-top: 2rem;
+  width: 90%;
+  margin: auto;
+}
+
+/* Section Headers */
+.resume-section h3 {
+  font-size: 1.8rem;
+  color: #4caf50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resume-section h3::before {
+  content: "📂"; /* Icon for Experience and Education */
+  font-size: 1.5rem;
+}
+
+/* Each Resume Item */
+.resume-item {
+  background-color: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.resume-item span {
+  font-size: 1.1rem;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.resume-item h4 {
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.resume-item p {
+  font-size: 1rem;
+  color: #c5c5c5;
+  margin-top: 0.5rem;
+}
+
+/* Gallup Strengths Section */
+.gallup-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  color: #a8ff60;
+  margin-top: 2rem;
+  width: 90%;
+  margin: auto;
+}
+
+.gallup-section h3 {
+  font-size: 1.8rem;
+  color: #4caf50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gallup-section h3::before {
+  content: "💪"; /* Icon for Gallup Strengths */
+  font-size: 1.5rem;
+}
+
+.gallup-item {
+  background-color: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.gallup-item h4 {
+  font-size: 1.4rem;
+  color: #4caf50;
+}
+
+.gallup-item p {
+  font-size: 1rem;
+  color: #c5c5c5;
+}
+
+.gallup-icon {
+  font-size: 2rem;
+  color: #4caf50;
+}
+body {
+  cursor: none;
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 8px; /* Reduced width */
+  height: 8px; /* Reduced height */
+  background-color: #a8ff60;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0.6; /* Reduced opacity for a subtle effect */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  animation: trail-animation 0.3s ease-out; /* Shortened animation duration */
+}
+
+@keyframes trail-animation {
+  from {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.3); /* Smaller end size for a minimized trail */
+  }
+}
+/* General Media Query Adjustments */
+@media (max-width: 768px) {
+  /* Sidebar to top navigation */
+  .container {
+    flex-direction: column;
+  }
+  #contactForm {
+    margin-left: 0;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 1rem 0;
+  }
+
+  .profile-photo {
+    width: 120px;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Convert nav items to a burger menu */
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: #111;
+  }
+
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #a8ff60;
+    margin-top: 1rem;
+  }
+
+  .nav-item {
+    padding: 0.75rem 0;
+  }
+
+  /* Show nav when clicked */
+  .show-nav nav {
+    display: flex;
+  }
+
+  /* About Me Section */
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    gap: 1rem;
+  }
+
+  /* Projects Section - Adjust to columns */
+  .project-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column */
+    gap: 1.5rem;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
+  .project-card {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Resume Section */
+  .resume-section,
+  .gallup-section {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  /* Smaller adjustments for very small screens */
+  .profile-photo {
+    width: 80px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .job-title {
+    font-size: 0.9rem;
+  }
+
+  .about-description {
+    font-size: 0.9rem;
+  }
+
+  .project h3 {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  /* Project Card Image */
+  .project-image {
+    height: 120px;
+  }
+
+  /* Contact Section */
+  #contactForm {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  #contactForm input,
+  #contactForm textarea,
+  #contactForm button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Profile Photo Styling for Desktop */
+.profile-photo {
+  width: 180px; /* Increased size */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+.profile-photo:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+}
+
+/* Burger Menu - Hidden on Desktop */
+.burger-menu {
+  display: none;
+}
+
+/* Show Burger Menu only on Small Screens */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+}
+
+/* Social Icon Styling */
+.social-links {
+  display: flex;
+  gap: 1rem; /* Space between icons */
+  margin-top: 1rem;
+}
+
+.social-icon {
+  color: #a8ff60;
+  font-size: 1.8rem; /* Adjust icon size */
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+  color: #4caf50; /* Change color on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+/* Skill Icons Styling */
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.skill-icon {
+  font-size: 2.5rem; /* Size of the icons */
+  position: relative;
+  cursor: pointer;
+  color: #a8ff60;
+  transition: transform 0.2s;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1); /* Slight scale on hover */
+}
+
+/* Tooltip styling */
+.skill-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #e0e0e0;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.skill-icon:hover::after {
+  opacity: 1;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  /* Sidebar adjustments */
+  .sidebar {
+    width: 100%;
+    position: relative;
+    padding: 1rem 0;
+    height: auto;
+  }
+
+  /* Burger Menu Position */
+  .burger-menu {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: block; /* Only show burger menu on smaller screens */
+    cursor: pointer;
+  }
+
+  /* Hide social links text and switch to icons only */
+  .social-links a {
+    display: inline-block;
+    font-size: 1.5rem; /* Resize icons */
+    margin: 0 0.5rem;
+  }
+
+  /* Center Profile and About Me */
+  .profile-photo {
+    width: 120px; /* Adjust profile picture size */
+    margin: 1rem auto;
+  }
+
+  h2,
+  .job-title {
+    text-align: center;
+  }
+
+  /* Content section full width */
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Center "About Me" heading and contents */
+  #about h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  .about-content {
+    padding: 1rem;
+    margin: auto;
+    max-width: 90%;
+  }
+
+  /* About grid for smaller screens */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Project container in single column */
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    min-width: 100%;
+    max-width: 90%;
+  }
+
+  /* Resume section adjustments */
+  .resume-section {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Gallup section adjustments */
+  .gallup-section {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Contact form width adjustment */
+  #contactForm {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .profile-photo {
+    width: 100px;
+  }
+
+  .sidebar .burger-menu {
+    font-size: 1.5rem;
+  }
+
+  .about-content,
+  .project-container,
+  .resume-section,
+  .gallup-section {
+    max-width: 100%;
+  }
+
+  .project-card,
+  .about-item,
+  .resume-item,
+  .gallup-item {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-grid {
+    gap: 1rem;
+  }
+}
+
+/* Extra adjustments for very small screens */
+@media (max-width: 480px) {
+  /* Sidebar: Reduce padding and adjust alignment */
+  .sidebar {
+    padding: 1rem 0;
+  }
+
+  /* Profile photo smaller for very small screens */
+  .profile-photo {
+    width: 90px;
+    margin: 0.5rem auto;
+  }
+
+  /* Center and adjust the size of text elements */
+  h2,
+  .job-title {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  /* Reduce size and spacing in social links */
+  .social-links a {
+    font-size: 1.2rem;
+    margin: 0 0.3rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .about-item {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .skills-icons {
+    gap: 0.3rem;
+  }
+
+  .skill-icon {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+  }
+
+  .content {
+    margin: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .project-container {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .project-card {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .resume-section,
+  .gallup-section {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .resume-item,
+  .gallup-item {
+    padding: 1rem;
+  }
+
+  #contactForm {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+.project-container,
+.resume-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 0;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .project-container,
+  .resume-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-description,
+  .resume-item p {
+    display: none;
+  }
+
+  .project-container,
+  .resume-section {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .project-image {
+    display: none;
+  }
+
+  .project-card,
+  .resume-item {
+    padding: 1rem;
+    max-width: 100%;
+  }
 }
