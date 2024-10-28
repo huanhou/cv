@@ -52,3 +52,7 @@ document
       }
     );
   });
+
+function toggleNav() {
+  document.querySelector(".sidebar").classList.toggle("show-nav");
+}
