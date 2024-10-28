@@ -78,7 +78,6 @@ h2 {
   margin-left: 25%;
   width: 75%;
   padding: 2rem;
-  max-height:100%;
   color: #fff;
 }
 
@@ -1670,6 +1669,182 @@ body {
   margin-left: 10px;
 }
 
+.carousel {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-track-container {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transform: translateY(-50%);
+  padding: 10px;
+}
+
+.carousel-button--left {
+  left: 10px;
+}
+
+.carousel-button--right {
+  right: 10px;
+}
+
+.project-content {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: #a8ff60;
+  border-radius: 10px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: 2px solid #4caf50;
+  color: #4caf50;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.project-link:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 2rem;
+}
+
+.carousel-card {
+  min-width: 300px;
+  flex-shrink: 0;
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carousel-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #a8ff60;
+  padding: 0 1rem;
+}
+/* General styling for project section */
+#projects {
+  padding: 2rem;
+  background-color: #1a1a1a;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1rem;
+}
+
+.project-technologies {
+  font-size: 0.9rem;
+  color: #4caf50;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #c5c5c5;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  display: inline-block;
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #4caf50;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.project-link:hover {
+  background-color: #4caf50;
+  color: #fff;
+}
 .project-container {
   display: flex;
   gap: 1rem;
@@ -1687,7 +1862,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height:fit-content;
+  height: 350px;
 }
 
 .project-image {
@@ -1733,4 +1908,3 @@ body {
   background-color: #4caf50;
   color: #fff;
 }
-
