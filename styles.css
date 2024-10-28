@@ -1687,6 +1687,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height:fit-content;
 }
 
 .project-image {
