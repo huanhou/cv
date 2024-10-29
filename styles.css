@@ -299,7 +299,8 @@ body {
   justify-content: center;
   align-items: center;
   padding: 40px;
-  min-height: 600px; /* Adjusted minimum height for larger form display */
+  min-height: 600px;
+  flex-direction: column; /* Adjusted minimum height for larger form display */
 }
 
 #contactForm {
@@ -1148,6 +1149,7 @@ body {
   display: flex;
   gap: 1rem; /* Space between icons */
   margin-top: 1rem;
+  flex-direction: row;
 }
 
 .social-icon {
@@ -1948,12 +1950,22 @@ body {
     width: 100%;
   }
 
+  .section {
+    padding: 7px;
+  }
+
+  #projects.active {
+    padding: 0rem;
+  }
   .social-icons {
     margin-top: 100%;
     bottom: 0;
     margin-bottom: 0;
     padding-bottom: 0;
     flex-direction: column;
+  }
+  .content {
+    padding: 0;
   }
 }
 
@@ -1971,4 +1983,548 @@ body {
   }
 
   /* Contact form takes full width */
+}
+.slider {
+  display: flex;
+  gap: 2rem;
+  overflow: auto;
+  padding: 2rem;
+  scroll-snap-type: x mandatory;
+}
+
+.slider-card {
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 300px;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slider-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 255, 100, 0.5);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: #0ef;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.card-languages {
+  margin-bottom: 1rem;
+}
+
+.language-tag {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  margin: 0.2rem;
+  background-color: #0f0;
+  color: #121212;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.language-tag:hover {
+  background-color: #121212;
+  color: #0f0;
+  border: 1px solid #0f0;
+}
+
+.view-project-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  color: #0ef;
+  border: 2px solid #0ef;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.view-project-btn:hover {
+  background-color: #0ef;
+  color: #121212;
+}
+
+.slider {
+  display: flex;
+  gap: 2rem;
+  overflow-x: scroll;
+  padding: 2rem;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
+}
+/* Base styles for the slider and cards */
+.slider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.card {
+  width: 250px;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.card .languages {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.card .languages span {
+  background-color: #32cd32; /* Green color */
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: #000;
+}
+
+.card button {
+  background-color: #32cd32;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: #228b22; /* Darker green */
+}
+
+/* Media Query for smaller screens (300px or smaller) */
+@media (max-width: 300px) {
+  .card {
+    width: 180px;
+    padding: 0.5rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+
+  .card .languages span {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .card button {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+/* Gallup Strengths & Resume Section Styling */
+.resume-section h3,
+.gallup-section h3 {
+  color: #4caf50;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* General styling for resume items */
+.resume-item {
+  background-color: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for Gallup strengths within resume items */
+.gallup-item h4 {
+  font-size: 1.4rem;
+  color: #4caf50;
+  margin-bottom: 0.5rem;
+}
+
+.gallup-item p {
+  font-size: 1rem;
+  color: #c5c5c5;
+  margin-top: 0.5rem;
+}
+
+/* Skill list styling */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.skill {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #a8ff60;
+  background: rgba(76, 175, 80, 0.2);
+}
+
+/* Skill list hover styling */
+.skill-list .skill {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #a8ff60;
+  background: rgba(76, 175, 80, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-list .skill:hover {
+  background-color: #4caf50;
+  color: #1a1a1a;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 255, 100, 0.3);
+}
+
+.gallup-section {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 15px;
+  color: #a8ff60;
+  margin-top: 2rem;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.gallup-section h3 {
+  font-size: 1.8rem;
+  color: #4caf50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gallup-item {
+  background-color: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
+}
+
+.gallup-item h4 {
+  font-size: 1.4rem;
+  color: #4caf50;
+  margin-bottom: 0.25rem; /* Adjusts spacing for cleaner look */
+}
+
+.gallup-item p {
+  font-size: 1rem;
+  color: #c5c5c5;
+  margin-top: 0.25rem;
+}
+
+#resume h3 {
+  padding-bottom: 10px;
+}
+.whatsapp-icon {
+  font-size: 2rem;
+  color: #4caf50; /* Use your site's primary green color */
+  background-color: #1a1a1a; /* Background matching the site's dark theme */
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+  color: #1a1a1a; /* Text changes to dark on hover */
+  background-color: #4caf50; /* Background changes to green on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Common styling for both icons */
+.icon-link {
+  font-size: 2rem;
+  background-color: #1a1a1a; /* Dark background */
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+/* WhatsApp specific */
+.whatsapp-icon {
+  color: #4caf50; /* Primary green color for WhatsApp */
+}
+
+.whatsapp-icon:hover {
+  color: #1a1a1a;
+  background-color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Telegram specific */
+.telegram-icon {
+  color: #0088cc; /* Standard Telegram blue color */
+}
+
+.telegram-icon:hover {
+  color: #1a1a1a;
+  background-color: #0088cc;
+  transform: scale(1.1);
+}
+/* Container styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem; /* Adjusts the space under the Contact Me section */
+}
+
+/* Common styling for icons */
+.social-icon {
+  font-size: 2rem;
+  background-color: #1a1a1a; /* Dark background for consistency */
+  color: #a8ff60; /* Icon color */
+  border-radius: 50%;
+  padding: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+/* WhatsApp specific styling */
+.whatsapp-icon {
+  color: #4caf50; /* WhatsApp green */
+}
+
+.whatsapp-icon:hover {
+  color: #1a1a1a;
+  background-color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Telegram specific styling */
+.telegram-icon {
+  color: #0088cc; /* Telegram blue */
+}
+
+.telegram-icon:hover {
+  color: #1a1a1a;
+  background-color: #0088cc;
+  transform: scale(1.1);
+}
+/* Base styling for the Projects heading */
+#projects h2 {
+  font-size: 2.5rem; /* Default size */
+  color: #a8ff60;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Center and resize for smaller screens */
+@media (max-width: 768px) {
+  #projects h2 {
+    font-size: 1.8rem; /* Smaller font size */
+    text-align: center;
+    margin-bottom: 1rem;
+    /* Less margin for compact spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  #projects h2 {
+    display: none;
+  }
+}
+/* Container styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem; /* Adjusts the space under the Contact Me section */
+}
+
+/* Common styling for icons */
+.social-icon {
+  font-size: 2rem;
+  background-color: #1a1a1a; /* Dark background for consistency */
+  color: #a8ff60; /* Icon color */
+  border-radius: 50%;
+  padding: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+/* WhatsApp specific styling */
+.whatsapp-icon {
+  color: #4caf50; /* WhatsApp green */
+}
+
+.whatsapp-icon:hover {
+  color: #1a1a1a;
+  background-color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Telegram specific styling */
+.telegram-icon {
+  color: #0088cc; /* Telegram blue */
+}
+
+.telegram-icon:hover {
+  color: #1a1a1a;
+  background-color: #0088cc;
+  transform: scale(1.1);
+}
+
+@media (max-width: 250px) {
+  /* Sidebar adjustments */
+  .sidebar {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  /* About section adjustments */
+  .about-content {
+    padding: 1rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .about-description {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .about-item h3 {
+    font-size: 0.9rem;
+  }
+
+  .about-item p {
+    font-size: 0.7rem;
+  }
+
+  /* Projects Section - Smaller card sizes */
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 240px; /* Smaller card width */
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .project-image {
+    height: 100px; /* Smaller image */
+    object-fit: contain;
+  }
+
+  .project-description {
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+
+  .project-link {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  /* Contact Section */
+  #contactForm {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Social Icons in Row */
+  .social-icons {
+    flex-direction: row;
+    gap: 0.3rem;
+  }
+
+  .social-icon {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+  }
 }
